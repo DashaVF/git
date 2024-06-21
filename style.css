@@ -321,6 +321,45 @@ span{
     border-radius: 8px;
 }
 
+.container-presentation{
+    display: flex;
+    gap: 40px;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+.presentation-main{
+    max-width: 940px;
+    max-height: 480px;
+    border-radius: 8px;
+}
+
+.card-presenration{
+    
+    width: 440px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    background: var(--button-radiobutton-static);
+    box-shadow: 0px 0px 20px rgba(13, 64, 64, 0.1); 
+    /* в активной нет тени */
+    border-radius: 4px;
+
+}
+
+.card-presenration img{
+    width: 48px;
+    height: 48px;
+    margin: 12px 20px 12px;
+    border-radius: 4px 0px 0px 0px;
+}
+
+.container-card-presenration{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
 h1{
     font-size: 56px;
     line-height: 56px;
