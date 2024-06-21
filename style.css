@@ -360,6 +360,59 @@ span{
     flex-direction: column;
 }
 
+.container-info{
+    display: flex;
+    max-width: 1420px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.container-form{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+.accordion{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.card-accordion{
+    background: var(--main-gray-lighter);
+    border-radius: 8px;
+}
+
+.card-accordion-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-accordion-header p{
+    padding: 24px;
+    color: var(--texticon-gray-black);
+}
+
+.card-accordion-body p{
+    color: var(--main-gray-dark);
+}
+
+.card-accordion-body{
+    padding: 12px 24px 40px 24px;
+}
+
+.icon-accordion{
+    background: var(--button-primary-static);
+    border-radius: 4px;
+    width: 48px;
+    height: 48px;
+    margin: 12px;
+}
+
 h1{
     font-size: 56px;
     line-height: 56px;
