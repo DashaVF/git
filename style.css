@@ -251,13 +251,16 @@ span{
     align-items: center;
     padding: 12px;
     gap: 8px;
-    width: 48px;
-    height: 48px;
-    background: #FFFFFF;
+    width: 24px;
+    height: 24px;
+    background: var(--button-shadow-static);
     box-shadow: 0px 0px 20px rgba(13, 64, 64, 0.1);
     border-radius: 8px;
     transform: rotate(-90deg);
+    cursor: pointer;
 }
+
+
 
 .button-slider-left{
     display: flex;
@@ -266,12 +269,23 @@ span{
     align-items: center;
     padding: 12px;
     gap: 8px;
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
     background: #FFFFFF;
     box-shadow: 0px 0px 20px rgba(13, 64, 64, 0.1);
     border-radius: 8px;
     transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.button-slider-right:hover, .button-slider-left:hover{
+    background: var(--button-shadow-hover);
+    box-shadow:none
+}
+
+.button-slider-right:active, .button-slider-left:active{
+    background: var(--button-shadow-press);
+    box-shadow:none
 }
 
 .container-button-slider{
@@ -297,6 +311,7 @@ span{
 
 .card-slider{
     position: relative;
+    cursor: pointer;
 }
 
 .card-slider-title{
@@ -315,8 +330,47 @@ span{
     bottom: 0;
 }
 
-.card-slider img{
+.card-slider div{
     border-radius: 8px;
+    border: 2px solid var(--main-gray-light);
+    width: 340px;
+    height: 480px;
+}
+
+.card-slider-img1{
+    background: url(images/slider/1.png);
+}
+
+.card-slider-img2{
+    background: url(images/slider/2.png);
+}
+
+.card-slider-img3{
+    background: url(images/slider/3.png);
+}
+
+.card-slider-img4{
+    background: url(images/slider/4.png);
+}
+
+.card-slider-img5{
+    background: url(images/slider/5.png);
+}
+
+.card-slider:hover div{
+    background: url(images/slider/img-hover.png);
+}
+
+.card-slider:hover p{
+    background: var(--main-color1-main);
+}
+
+.card-slider:active div{
+    background: url(images/slider/img-active.png);
+}
+
+.card-slider:active p{
+    background: var(--main-color1-dark);
 }
 
 .container-presentation{
@@ -333,17 +387,32 @@ span{
 }
 
 .card-presenration{
-    
+    position: relative;
     width: 440px;
     height: 72px;
     display: flex;
     align-items: center;
     background: var(--button-radiobutton-static);
     box-shadow: 0px 0px 20px rgba(13, 64, 64, 0.1); 
-    /* в активной нет тени */
+    border: 2px solid var(--button-radiobutton-static);
     border-radius: 4px;
-
 }
+
+.card-presenration:hover{
+    box-shadow: none;
+    border: 2px solid var(--button-radiobutton-hover);
+}
+
+label:has(input[type='radio']:checked) {
+    box-shadow: none;
+    border: 2px solid var(--button-radiobutton-press);
+}
+  
+input[type='radio'] {
+    display: none;
+}
+  
+  
 
 .card-presenration img{
     width: 48px;
