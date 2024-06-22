@@ -133,12 +133,12 @@ a:active{
     text-decoration: none;
 }
 
-.button-form:hover{
+.button-form:hover, .icon-accordion:hover{
     background: var(--button-primary-hover);
     color: var(--texticon-gray-white);
 }
 
-.button-form:active{
+.button-form:active, .icon-accordion:active{
     background: var(--button-primary-press);
     color: var(--texticon-gray-white);
 }
@@ -451,6 +451,15 @@ input[type='radio'] {
 .card-accordion{
     background: var(--main-gray-lighter);
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.card-accordion:hover .t2_b{
+    color: var(--texticon-color1-main);
+}
+
+.card-accordion:active .t2_b{
+    color: var(--texticon-color1-dark);
 }
 
 .card-accordion-header{
@@ -478,7 +487,15 @@ input[type='radio'] {
     width: 48px;
     height: 48px;
     margin: 12px;
+    cursor: pointer;
 }
+
+/* .icon-accordion img{
+    transform: rotate(45deg);
+} */
+
+
+
 
 footer{
     background: var(--main-gray-black);
