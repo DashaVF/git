@@ -437,7 +437,6 @@ span{
     gap: 20px;
     overflow-x: scroll;
     margin-left: calc(50% - 710px);
-    margin-left: 0px;
 }
 
 .card-slider{
@@ -921,6 +920,14 @@ h4{
     font-size: 14px;
     line-height: 150%;
 }
+
+/* медиа запрос для адаптива слайдера */
+@media screen and (width < 1550px){
+    .container-slider-body{
+        margin-left: 0px;
+    }
+}
+
 
 /* hd */
 @media screen and (width < 1920px) and (width >= 1366px){
