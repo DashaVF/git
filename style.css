@@ -83,24 +83,143 @@ h1, h2, h3, h4{
 }
 
 
-header{
+.header-wrapper{
     height: 72px;
     margin: 0 auto;
     max-width: 1420px;
     display: flex;
     justify-content: space-between;
+    
 }
 
-header ul{
+header{
+    position: fixed;
+    background: white;
+    right: 0px;
+    left: 0px;
+    z-index: 100;
+    width: 100%;
+}
+
+.header-wrapper ul{
     list-style: none;
     display: flex;
     align-items: center;
     gap: 12px;
+  
 }
 
 header a{
     text-decoration: none;
     
+}
+
+header h4{
+    color: var(--texticon-color1-main);
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+header h4:active{
+    color: var(--texticon-color1-dark);
+}
+
+.logo{
+    position: relative;
+    overflow: hidden;
+    height: 72px;
+    width: 200px;
+    cursor: pointer;
+}
+
+
+.logo:hover .to-header{
+    animation: textToTop .4s ease forwards;
+}
+
+.logo:hover img{
+    animation: logoToTop .4s ease forwards;
+}
+
+
+
+.logo img{
+    animation: logoToDefault .4s ease forwards;
+    position: absolute;
+    margin: auto 0;
+    top: 0%;
+    bottom: 0%;
+    user-select: none;
+    transition: all .5s;
+}
+
+.to-header{
+    animation: textToDefault .4s ease forwards;
+    position: absolute;
+    right: 0px;
+    bottom: -60%;
+    left: 0px;
+    display: flex;
+    height: 72px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+}
+
+
+
+@keyframes logoToTop {
+    0%{
+        bottom: 0%;
+        top: 0%;
+    }
+    100%{
+        right: 0%;
+        top: -150%;
+        left: 0%;
+    }
+}
+
+@keyframes logoToDefault {
+    0%{
+        right: 0%;
+        top: -150%;
+        left: 0%;
+    }
+    100%{
+        bottom: 0%;
+        top: 0%;
+    }
+}
+
+@keyframes textToTop {
+    0%{
+        right: 0%;
+        bottom: -60%;
+        left: 0%;
+    }
+    100%{
+        right: 0%;
+        bottom: 50%;
+        left: 0%;
+        top: 0%;
+    }
+}
+
+@keyframes textToDefault {
+    0%{
+        right: 0%;
+        bottom: 50%;
+        left: 0%;
+        top: 0%;
+    }
+    100%{
+        right: 0%;
+        bottom: -60%;
+        left: 0%;
+    }
 }
 
 a{
