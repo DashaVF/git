@@ -435,8 +435,9 @@ span{
 .container-slider-body{
     display: flex;
     gap: 20px;
-    overflow: hidden;
+    overflow-x: scroll;
     margin-left: calc(50% - 710px);
+    margin-left: 0px;
 }
 
 .card-slider{
@@ -855,6 +856,14 @@ input[type='checkbox']{
     color: var(--texticon-gray-dark);
 }
 
+.container-slider-body::-webkit-scrollbar {
+    width: 0;
+}
+
+.container-about-img::-webkit-scrollbar {
+    width: 0;
+}
+
 h1{
     font-size: 56px;
     line-height: 100%;
@@ -918,7 +927,7 @@ h4{
     .container-main img{
         max-width: 628px;
     }
-    .container-main, .container-about{
+    .container-main, .container-about, .container-slider{
         padding: 120px 45px;
     }
     .header-wrapper{
@@ -991,13 +1000,12 @@ h4{
         display: flex;
         flex-direction: row;
         gap: 16px;
-        width: 200%;
         overflow: scroll;
     }
 
     .container-about-img img{
-        min-width: 280px;
-        width: 100%;
+        width: 280px;
+        height: 200px;
     }
 
     .container-about-main{
@@ -1013,6 +1021,14 @@ h4{
     .card-slider div{
         width: 280px;
         height: 400px;
+    }
+
+    .container-button-slider{
+        visibility: hidden;
+    }
+
+    .container-slider{
+        margin: 0 16px;
     }
 
     h1{
@@ -1097,13 +1113,12 @@ h4{
         display: flex;
         flex-direction: row;
         gap: 16px;
-        width: 200%;
-        overflow: scroll;
+        overflow-x: scroll;
     }
 
     .container-about-img img{
-        min-width: 280px;
-        width: 100%;
+        width: 280px;
+        height: 200px;
     }
 
     .container-about-main{
@@ -1128,6 +1143,14 @@ h4{
     .card-slider div{
         width: 280px;
         height: 400px;
+    }
+
+    .container-button-slider{
+        visibility: hidden;
+    }
+
+    .container-slider{
+        margin: 0 16px;
     }
     
     h1{
