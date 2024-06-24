@@ -860,10 +860,12 @@ input[type='checkbox']{
 
 .container-slider-body::-webkit-scrollbar {
     width: 0;
+    scrollbar-width: none;
 }
 
 .container-about-img::-webkit-scrollbar {
     width: 0;
+    scrollbar-width: none;
 }
 
 h1{
@@ -937,7 +939,7 @@ h4{
     .container-main img{
         max-width: 628px;
     }
-    .container-main, .container-about, .container-slider, .container-presentation{
+    .container-main, .container-about, .container-slider, .container-presentation, .container-info{
         padding: 120px 45px;
     }
     .header-wrapper{
@@ -982,6 +984,7 @@ h4{
     .container-main{
         margin: 0 16px;
         gap: 16px;
+        padding-top: 134px !important;
     }
 
     .container-main a{
@@ -1006,6 +1009,10 @@ h4{
 
     .header-wrapper ul{
         display: none;
+    }
+
+    .card-number{
+        padding: 20px;
     }
 
     .container-about{
@@ -1050,6 +1057,10 @@ h4{
         margin: 0 16px;
     }
 
+    .container-slider-body{
+        gap: 16px;
+    }
+
     h1{
         font-size: 32px;
     }
@@ -1079,6 +1090,19 @@ h4{
         margin: 0 16px;
     }
 
+    .accordion{
+        gap: 16px;
+    }
+
+    .container-info{
+        margin: 0 16px;
+        gap: 40px;
+        padding-top: 40px;
+    }
+
+    .container-slider{
+        padding-top: 40px;
+    }
 }
 
 /* mobile */
@@ -1098,16 +1122,18 @@ h4{
 
     .container-main-text{
         padding: 0;
+        gap: 40px;
     }
 
     .text-main-wrapper {
         margin-top: 20px;
         max-width: none;
-    }    
+    }
 
     .container-main{
         margin: 0 16px;
         gap: 16px;
+        padding-top: 134px !important;
     }
 
     .container-main a{
@@ -1163,10 +1189,12 @@ h4{
 
     .card-number{
         max-width: none;
+        padding: 20px;
     }
 
     .text-about-wrapper {
         margin-bottom: 0px;
+        margin-top: 20px;
     }
 
     .container {
@@ -1184,6 +1212,11 @@ h4{
 
     .container-slider{
         margin: 0 16px;
+        padding-top: 40px;
+    }
+
+    .container-slider-body{
+        gap: 16px;
     }
 
     .presentation-main{
@@ -1202,6 +1235,16 @@ h4{
 
     .container-card-presenration{
         min-width: 0px;
+    }
+
+    .accordion{
+        gap: 16px;
+    }
+
+    .container-info{
+        margin: 0 16px;
+        padding-top: 40px !important;
+        gap: 40px;
     }
     
     h1{
