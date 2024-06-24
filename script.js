@@ -69,3 +69,8 @@ cardsAccordion.forEach(cardAccordion => {
        
     })
 });
+
+// анимация "Наверх" в шапке
+document.querySelector(".to-header").addEventListener("click", function(e){
+    document.documentElement.scrollTop = 0;
+})
