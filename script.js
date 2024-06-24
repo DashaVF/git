@@ -120,3 +120,12 @@ menuCloseButton.forEach(function (button) {
         F=0; // закрыли
     })
 })
+
+// изменение лого от размеров экрана
+window.addEventListener("resize", function() {
+    if (window.innerWidth < 1366){
+        this.document.querySelector(".logo-img").setAttribute("src", "images/logo/mobile-static.svg")
+    } else{
+        this.document.querySelector(".logo-img").setAttribute("src", "images/logo/static.svg")
+    }
+});
