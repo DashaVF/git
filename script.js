@@ -93,6 +93,7 @@ iconMenu.addEventListener("click", function (e) {
         
         logo.classList.add("none");
         e.target.setAttribute("src", "images/icon/close-white.svg");
+        iconMenuImg.classList.add("rotate");
         menu.classList.remove("none");
         headerMenuTitle.classList.remove("none");
         headerPhoneContainer.classList.add("header-phone-open")
@@ -103,6 +104,7 @@ iconMenu.addEventListener("click", function (e) {
         
         logo.classList.remove("none");
         e.target.setAttribute("src", "images/icon/burger-white.svg")
+        iconMenuImg.classList.remove("rotate");
         menu.classList.add("none");
         headerMenuTitle.classList.add("none");
         headerPhoneContainer.classList.remove("header-phone-open")
@@ -115,6 +117,7 @@ menuCloseButton.forEach(function (button) {
     button.addEventListener("click", function (e) {
         logo.classList.remove("none");
         iconMenuImg.setAttribute("src", "images/icon/burger-white.svg")
+        iconMenuImg.classList.remove("rotate");
         menu.classList.add("none");
         headerMenuTitle.classList.add("none");
         headerPhoneContainer.classList.remove("header-phone-open")

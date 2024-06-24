@@ -876,6 +876,9 @@ input[type='radio'] {
     cursor: pointer;
 }
 
+.rotate{
+    transform: rotate(45deg);
+}
 
 
 
