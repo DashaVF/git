@@ -365,6 +365,12 @@ span{
     gap: 40px;
 }
 
+.container-about-main{
+    position: sticky;
+    height: fit-content;
+    top: 75px;
+}
+
 .container-about-img img{
     max-width: 700px;
     width: 100%;
@@ -1087,6 +1093,11 @@ h4{
         gap: 16px;
     }
 
+    .container-about-main{
+        position: static;
+        height: 100%;
+    }
+
     h1{
         font-size: 32px;
     }
@@ -1399,6 +1410,11 @@ h4{
         gap: 12px;
         flex-direction: column;
         width: 100%;
+    }
+
+    .container-about-main{
+        position: static;
+        height: 100%;
     }
     
     h1{
