@@ -594,6 +594,16 @@ input[type='radio'] {
     background: var(--main-gray-lighter);
     border-radius: 8px;
     cursor: pointer;
+    /* height: 72px; */
+    transition: all 1s ease-in-out;
+    /* overflow: hidden; */
+
+}
+
+.card-accordion-body-animation{
+    display: block !important;
+    transition: all 1s ease-in-out;
+
 }
 
 .card-accordion:hover .t2_b{
@@ -621,6 +631,8 @@ input[type='radio'] {
 
 .card-accordion-body{
     padding: 12px 24px 40px 24px;
+    display: none;
+    transition: all 1s ease-in-out;
 }
 
 .icon-accordion{
@@ -632,9 +644,6 @@ input[type='radio'] {
     cursor: pointer;
 }
 
-/* .icon-accordion img{
-    transform: rotate(45deg);
-} */
 
 
 
@@ -952,6 +961,11 @@ h4{
     }
 }
 
+/* класс для иконки аккордиона */
+.rotate-icon{
+    transform: rotate(45deg);
+}
+
 
 /* hd */
 @media screen and (width < 1920px) and (width >= 1366px){
@@ -1130,6 +1144,8 @@ h4{
     .accordion{
         gap: 16px;
     }
+
+
 
     .container-info{
         margin: 0 16px;
@@ -1332,6 +1348,8 @@ h4{
     .accordion{
         gap: 16px;
     }
+
+
 
     .container-info{
         margin: 0 16px;

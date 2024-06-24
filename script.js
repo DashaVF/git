@@ -10,42 +10,46 @@ let cards = document.querySelectorAll(".card-presenration")
 // цикл обрабатывающий действие клик по блоку карточки
 cards.forEach(function(card) {
     card.addEventListener("click", function(e) {
+        let card = e.target.closest(".card-presenration")
         //получение пути к изображению, который отображен в карточке
-        let src = e.target.children[0].src;
-        console.log(src)
-        //изменение главного изображения
-        mainPhoto.setAttribute("src", src)
-    });
-});
-
-// переменная с названиями карточек
-let clickTitle = document.querySelectorAll(".title-presentation")
-
-// цикл обрабатывающий действие клик по названию карточки
-clickTitle.forEach(function(title) {
-    title.addEventListener("click", function(e) {
-        //получение пути к изображению, который отображен в карточке при клике по названию
-        let src = e.target.previousElementSibling.src;
+        let src = card.querySelector("img").src;
 
         //изменение главного изображения
         mainPhoto.setAttribute("src", src)
     });
 });
 
-// переменная с изображением карточки
-let clickImg = document.querySelectorAll(".img-presentation")
 
-// цикл обрабатывающий действие клик по ищображению в карточке
-clickImg.forEach(function(img) {
-    img.addEventListener("click", function(e) {
-        //получение пути к изображению, который отображен в карточке при клике по названию
-        let src = e.target.src;
-        
-        //изменение главного изображения
-        mainPhoto.setAttribute("src", src)
-    });
-});
 
 // слайдер
 
-// аккордион
+// аккордеон
+let cardsAccordion = document.querySelectorAll(".card-accordion");
+
+cardsAccordion.forEach(cardAccordion => {
+    cardAccordion.addEventListener("click", function (e) {
+        let card = e.target.closest('.card-accordion');
+
+        // переменная с иконкой
+        let icon = card.querySelector("img");
+
+        // переменная с телом карточки
+        let cardBody = card.querySelector(".card-accordion-body");
+
+
+        // проверка на то есть ли у элемента класс, говорящий о том что иконку развернули - раскрыли аккордеон
+        if (icon.classList.contains("rotate-icon")) {
+            // скрываем блок с ответами
+            cardBody.classList.remove("card-accordion-body-animation");
+            // удаляем класс анимации вращения
+            icon.classList.remove("rotate-icon");
+        } else {
+            // запускаем анимацию раскрытия карточки аккордеона
+            cardBody.classList.add("card-accordion-body-animation");
+            //  добавляем анимацию вращения иконки
+            icon.classList.add("rotate-icon");
+        }
+
+       
+    })
+});
