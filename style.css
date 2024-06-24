@@ -751,6 +751,11 @@ input[type='checkbox']{
     overflow: hidden;
 }
 
+.containers-form-input{
+    display: flex;
+    gap: 20px;
+}
+
 .container-form-input{
     display: flex;
     gap: 20px;
@@ -980,6 +985,10 @@ h4{
         gap: 48px;
     }
 
+    .form{
+        flex-direction: column;
+    }
+
 }
 
 /* tablet */
@@ -1157,6 +1166,11 @@ h4{
         width: inherit;
     }
 
+    .containers-form-input{
+        width: 100%;
+        gap: 12px;
+    }
+
     .container-form-input{
         gap: 12px;
         width: 100%;
@@ -1167,7 +1181,7 @@ h4{
     }
     
     form input[type='text']{
-        width: 49%;
+        width: 100%;
     }
 
 }
@@ -1379,6 +1393,12 @@ h4{
 
     .social-icons{
         justify-content: center;
+    }
+
+    .containers-form-input {
+        gap: 12px;
+        flex-direction: column;
+        width: 100%;
     }
     
     h1{
