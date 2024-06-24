@@ -270,12 +270,12 @@ a:active{
     cursor: pointer;
 }
 
-.button-form:hover, .icon-accordion:hover{
+.button-form:hover, .icon-accordion:hover, .header-phone-icon:hover {
     background: var(--button-primary-hover);
     color: var(--texticon-gray-white);
 }
 
-.button-form:active, .icon-accordion:active{
+.button-form:active, .icon-accordion:active, .header-phone-icon:active{
     background: var(--button-primary-press);
     color: var(--texticon-gray-white);
 }
