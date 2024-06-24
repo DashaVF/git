@@ -77,16 +77,22 @@ document.querySelector(".to-header").addEventListener("click", function(e){
 
 // меню мобильное
 let menu = document.querySelector(".menu-phone")
+// блок кнопки бургер
 let iconMenu = document.querySelector(".header-phone-icon");
+// изображение кнопки бургера
 let iconMenuImg = document.querySelector(".header-phone-icon-img");
+// шапка мобильного меню
 let headerPhoneContainer = document.querySelector(".header-phone")
+// элементы после нажатия на которых должно закрываться меню
 let menuCloseButton = document.querySelectorAll(".menu-phone-close");
+// вместо лого "Меню"
 let headerMenuTitle = document.querySelector(".header-phone-title");
+// лого
 let logo = document.querySelector(".logo");
 let F = 0; // меню отключено
 
 
-
+// анимация открытия и закрытия окна по кнопке меню
 iconMenu.addEventListener("click", function (e) {
 
     if (F==0) {
@@ -113,6 +119,7 @@ iconMenu.addEventListener("click", function (e) {
     }
 })
 
+// реализация закрытия окна после нажатия на пункты меню
 menuCloseButton.forEach(function (button) {
     button.addEventListener("click", function (e) {
         logo.classList.remove("none");
