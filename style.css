@@ -1208,6 +1208,16 @@ input[type='checkbox']{
 ::-webkit-input-placeholder { 
     color: var(--texticon-gray-dark);
 }
+::-moz-placeholder {
+    color: var(--texticon-gray-dark);
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: var(--texticon-gray-dark);
+}
+::placeholder {
+    color: var(--texticon-gray-dark);
+}
 
 .container-slider-body::-webkit-scrollbar {
     width: 0;
