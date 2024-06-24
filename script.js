@@ -19,9 +19,25 @@ cards.forEach(function(card) {
     });
 });
 
-
-
 // слайдер
+// тело слайдера
+let slider = document.querySelector('.container-slider-body');
+// кнопка вперед
+let nextButton = document.querySelector('.button-slider-right');
+// кнопка назад
+let prevButton = document.querySelector('.button-slider-left');
+// ширина слайда
+let slideWidth = slider.querySelector('.card-slider').scrollWidth;
+// слайдер + gap
+slideWidth += 20;
+
+nextButton.addEventListener('click', function(e) {
+    slider.scrollLeft += slideWidth;
+});
+
+prevButton.addEventListener('click', function(e) {
+    slider.scrollLeft -= slideWidth;
+}); 
 
 // аккордеон
 let cardsAccordion = document.querySelectorAll(".card-accordion");
