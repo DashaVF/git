@@ -880,6 +880,9 @@ input[type='radio'] {
     transform: rotate(45deg);
 }
 
+.container-slider-body a{
+    padding: 0px;
+}
 
 
 
