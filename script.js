@@ -78,6 +78,7 @@ document.querySelector(".to-header").addEventListener("click", function(e){
 // меню мобильное
 let menu = document.querySelector(".menu-phone")
 let iconMenu = document.querySelector(".header-phone-icon");
+let iconMenuImg = document.querySelector(".header-phone-icon-img");
 let headerPhoneContainer = document.querySelector(".header-phone")
 let menuCloseButton = document.querySelectorAll(".menu-phone-close");
 let headerMenuTitle = document.querySelector(".header-phone-title");
@@ -113,10 +114,11 @@ iconMenu.addEventListener("click", function (e) {
 menuCloseButton.forEach(function (button) {
     button.addEventListener("click", function (e) {
         logo.classList.remove("none");
-        e.target.setAttribute("src", "images/icon/burger-white.svg")
+        iconMenuImg.setAttribute("src", "images/icon/burger-white.svg")
         menu.classList.add("none");
         headerMenuTitle.classList.add("none");
         headerPhoneContainer.classList.remove("header-phone-open")
+
         F=0; // закрыли
     })
 })
