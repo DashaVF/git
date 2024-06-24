@@ -489,7 +489,7 @@ span{
 
 .card-slider:hover div{
     background: url(images/slider/img-hover.png);
-    background-size: contain;
+    background-size: cover;
 }
 
 .card-slider:hover p{
@@ -498,7 +498,7 @@ span{
 
 .card-slider:active div{
     background: url(images/slider/img-active.png);
-    background-size: contain;
+    background-size: cover;
 }
 
 .card-slider:active p{
@@ -515,6 +515,7 @@ span{
 .presentation-main{
     max-width: 940px;
     max-height: 480px;
+    width: 100%;
     border-radius: 8px;
 }
 
@@ -557,6 +558,8 @@ input[type='radio'] {
 .container-card-presenration{
     display: flex;
     gap: 20px;
+    width: 100%;
+    min-width: 378px;
     flex-direction: column;
 }
 
@@ -934,7 +937,7 @@ h4{
     .container-main img{
         max-width: 628px;
     }
-    .container-main, .container-about, .container-slider{
+    .container-main, .container-about, .container-slider, .container-presentation{
         padding: 120px 45px;
     }
     .header-wrapper{
@@ -948,6 +951,15 @@ h4{
     .card-slider div{
         width: 304px;
         height: 420px;
+    }
+
+    .presentation-main{
+        max-width: 844px;
+        max-height: 440px;
+    }
+
+    .card-presenration{
+        width: 100%;
     }
 }
 
@@ -1053,6 +1065,20 @@ h4{
     h4{
         font-size: 20px;
     }
+
+    .presentation-main{
+        min-width: 342px;
+        width: 100%;
+    }
+
+    .card-presenration{
+        width: 100%;
+    }
+
+    .container-presentation{
+        margin: 0 16px;
+    }
+
 }
 
 /* mobile */
@@ -1158,6 +1184,24 @@ h4{
 
     .container-slider{
         margin: 0 16px;
+    }
+
+    .presentation-main{
+        min-width: 0px;
+        width: 100%;
+    }
+
+    .card-presenration{
+        width: 100%;
+    }
+
+    .container-presentation{
+        margin: 0 16px;
+        flex-direction: column;
+    }
+
+    .container-card-presenration{
+        min-width: 0px;
     }
     
     h1{
