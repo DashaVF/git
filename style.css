@@ -1139,7 +1139,6 @@ input[type='checkbox']{
 .background-form-left{
     position: absolute;
     top: -150%;
-    width: 200%;
     right: -50%;
     z-index: -1;
 }
@@ -1639,6 +1638,19 @@ h4{
         padding: 40px 16px;
     }
 
+    .background-form-right{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        right: -25%;
+        z-index: 1;
+    }
+
+    .background-form-left{
+        bottom: -400px;
+        top: auto;
+    }
+
 }
 
 /* mobile */
@@ -1992,6 +2004,20 @@ h4{
 
     h4{
         font-size: 20px;
+    }
+
+    .background-form-right{
+        position: absolute;
+        top: auto;
+        width: auto;
+        right: auto;
+        z-index: 1;
+        bottom: -300px;
+    }
+
+    .background-form-left{
+        bottom: -400px;
+        top: auto;
     }
 
 }
