@@ -74,3 +74,49 @@ cardsAccordion.forEach(cardAccordion => {
 document.querySelector(".to-header").addEventListener("click", function(e){
     document.documentElement.scrollTop = 0;
 })
+
+// меню мобильное
+let menu = document.querySelector(".menu-phone")
+let iconMenu = document.querySelector(".header-phone-icon");
+let headerPhoneContainer = document.querySelector(".header-phone")
+let menuCloseButton = document.querySelectorAll(".menu-phone-close");
+let headerMenuTitle = document.querySelector(".header-phone-title");
+let logo = document.querySelector(".logo");
+let F = 0; // меню отключено
+
+
+
+iconMenu.addEventListener("click", function (e) {
+
+    if (F==0) {
+        
+        logo.classList.add("none");
+        e.target.setAttribute("src", "images/icon/close-white.svg");
+        menu.classList.remove("none");
+        headerMenuTitle.classList.remove("none");
+        headerPhoneContainer.classList.add("header-phone-open")
+
+
+        F=1; // открыли меню
+    }else{
+        
+        logo.classList.remove("none");
+        e.target.setAttribute("src", "images/icon/burger-white.svg")
+        menu.classList.add("none");
+        headerMenuTitle.classList.add("none");
+        headerPhoneContainer.classList.remove("header-phone-open")
+
+        F=0; // закрыли
+    }
+})
+
+menuCloseButton.forEach(function (button) {
+    button.addEventListener("click", function (e) {
+        logo.classList.remove("none");
+        e.target.setAttribute("src", "images/icon/burger-white.svg")
+        menu.classList.add("none");
+        headerMenuTitle.classList.add("none");
+        headerPhoneContainer.classList.remove("header-phone-open")
+        F=0; // закрыли
+    })
+})
